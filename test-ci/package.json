@@ -1,0 +1,30 @@
+{
+  "name": "test-ci",
+  "version": "1.0.0",
+  "description": "Unit-test",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "build": "webpack --mode production",
+    "test": "jest --coverage"
+  },
+  "author": "npeplov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.6.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "core-js": "^3.8.1"
+  }
+}
