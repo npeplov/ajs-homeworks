@@ -11,13 +11,14 @@ const expectedArr = [
   { name: 'мечник', health: 10 },
 ];
 
-test('sortByHealth 10 100 80', () => {
+test('sortByHealth: toEqual', () => {
   expect(sortByHealth(inputArr)).toEqual(expectedArr);
 });
 
-test('sortByHealth: toBe - 10 100 80', () => {
-  const buff1 = Buffer.from(sortByHealth(inputArr));
-  const buff2 = Buffer.from(expectedArr);
+test('sortByHealth: toBe', () => {
+  expect(sortByHealth(inputArr)).toBe(expectedArr);
+});
 
-  expect(buff1.equals(buff2)).toBe(true);
+test('sortByHealth: toBe + JSON.stringify', () => {
+  expect(JSON.stringify(sortByHealth(inputArr))).toBe(JSON.stringify(expectedArr));
 });
