@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint . --fix",
     "build": "webpack --mode production",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "npeplov",
   "license": "ISC",
