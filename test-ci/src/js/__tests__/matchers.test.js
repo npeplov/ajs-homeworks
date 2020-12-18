@@ -15,8 +15,8 @@ test('sortByHealth: toEqual', () => {
   expect(sortByHealth(inputArr)).toEqual(expectedArr);
 });
 
-test('sortByHealth: toBe', () => {
-  expect(sortByHealth(inputArr)).toBe(expectedArr);
+test('sortByHealth: Not toBe', () => {
+  expect(sortByHealth(inputArr)).not.toBe(expectedArr);
 });
 
 test('sortByHealth: toBe + JSON.stringify', () => {
