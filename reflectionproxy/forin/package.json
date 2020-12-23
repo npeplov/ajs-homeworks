@@ -1,0 +1,28 @@
+{
+  "name": "advancedforin",
+  "version": "1.0.0",
+  "description": "Object, Reflection и Proxy. For .. in",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "build": "webpack --mode production",
+    "test": "jest",
+    "dev": "webpack-dev-server --mode development"
+  },
+  "author": "npeplov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.10",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "core-js": "^3.8.1"
+  }
+}
