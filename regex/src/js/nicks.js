@@ -3,4 +3,3 @@ export default class Validator {
     return /^[a-z][\w-]+[a-z]$/i.test(nick) && !/\d{3,}/.test(nick);
   }
 }
-// ~ 45 min

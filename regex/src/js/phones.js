@@ -7,4 +7,3 @@ export default class Validator {
     return `+${phoneArr.join('')}`;
   }
 }
-// ~60 min
