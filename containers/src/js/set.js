@@ -4,9 +4,11 @@ export default class Team {
   }
 
   add(char) {
-    if (this.members.has(char)) {
-      throw new Error('Char exist');
-    }
+    this.members.forEach((item) => {
+      if (JSON.stringify(item) === JSON.stringify(char)) {
+        throw new Error('Char exist');
+      }
+    });
     this.members.add(char);
   }
 

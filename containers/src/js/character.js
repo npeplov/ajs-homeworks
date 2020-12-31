@@ -6,5 +6,12 @@ export default class Character {
     this.level = 1;
     this.attack = null;
     this.defense = null;
+    if (this.name.length > 10 || this.name.length < 2) {
+      throw new Error('Неверное имя. Задайте от 2 до 10 символов');
+    }
+    const typesArr = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
+    if (!(typesArr.includes(this.type))) {
+      throw new Error('Неверный тип');
+    }
   }
 }
