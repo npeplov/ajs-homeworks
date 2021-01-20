@@ -26,6 +26,6 @@ export default class Nerf extends Character {
     if (this.stoned) {
       attack -= Math.log2(this.distance) * 5;
     }
-    return attack;
+    return (attack > 0) ? Math.round(attack) : 0;
   }
 }

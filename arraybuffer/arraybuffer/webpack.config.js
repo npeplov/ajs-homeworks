@@ -18,10 +18,10 @@ module.exports = {
 			},
 		],
 	},
-	// plugins: [
-	// 	new HtmlWebPackPlugin({
-	// 		template: './src/index.html',
-	// 		filename: './index.html',
-	// 	}),
-	// ]
+	plugins: [
+		new HtmlWebPackPlugin({
+			template: './src/index.html',
+			filename: './index.html',
+		}),
+	]
 }
