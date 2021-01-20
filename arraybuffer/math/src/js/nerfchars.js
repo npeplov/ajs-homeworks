@@ -8,37 +8,24 @@ export default class Nerf extends Character {
     this.stoned = false;
   }
 
-  getStoned() {
-    return this.stoned;
+  get stoned() {
+    return this.xstoned;
   }
 
-  setStoned() {
-    this.stoned = !this.stoned;
+  set stoned(value) {
+    this.xstoned = value;
   }
 
-  setAttack() {
-    // базовое значение атаки
-    // зачем сеттер? возврат к дефолту на 10?
-    this.attack = 10;
-    // почему просто не написать this.attack = 10?
-    // откуда брать дефолтные 10. где они должны храниться?
+  set attack(value) {
+    this.xattack = value;
   }
 
-  getAttack() {
-    this.setAttack();
-    // вся логика задания здесь
-    if (this.distance === 2) {
-      this.attack *= 0.9;
-    }
-    if (this.distance === 3) {
-      this.attack *= 0.8;
-    }
-    if (this.distance === 4) {
-      this.attack *= 0.7;
-    }
+  get attack() {
+    let attack = this.xattack * ((11 - this.distance) / 10);
+
     if (this.stoned) {
-      this.attack -= Math.log2(this.distance) * 0.5;
+      attack -= Math.log2(this.distance) * 5;
     }
-    return this.attack;
+    return attack;
   }
 }
