@@ -4,7 +4,7 @@ export default class Cart {
   private items: Buyable[] = [];
 
   add (item: Buyable): void {
-    const ind: number = this.items.findIndex((product) => {
+    const ind = this.items.findIndex((product) => {
       return product.id === item.id;
     });
     if (ind === -1)
@@ -22,7 +22,7 @@ export default class Cart {
     return this.sum() * (100 - percent) / 100;
   }
   del(targetid: number): void {
-    const ind: number = this.items.findIndex((item) => {
+    const ind = this.items.findIndex((item) => {
       return item.id === targetid;
     });
     if (ind !== -1)
