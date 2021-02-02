@@ -8,5 +8,5 @@ const team = new Team({
 });
 
 const iterator = team[Symbol.iterator]();
-console.log(iterator.next().value[1]);
-console.log(iterator.next().value[1]);
+console.log(iterator.next().value);
+console.log(iterator.next().value);

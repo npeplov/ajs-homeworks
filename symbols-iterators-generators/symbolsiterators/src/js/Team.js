@@ -11,7 +11,7 @@ export default class Team extends Object {
     return {
       next() {
         const result = {
-          value: entires[ind],
+          value: entires[ind][1],
           done: ind >= entires.length,
         };
         ind += 1;
